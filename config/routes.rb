@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   resource :about, only: [:show]
   resources :writings, only: [:index]
   resources :presses, only: [:index]
+  resource :lessons, only: [:show]
+  resource :studio_share, only: [:show]
   resource :store, only: [:show]
   resource :contact, only: [:show]
   resource :purpose, only: [:show]
