@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   resources :presses, only: [:index]
   resource :lessons, only: [:show]
   resource :studio_share, only: [:show]
+  resource :kiln_share, only: [:show]
   resource :store, only: [:show]
   resource :contact, only: [:show]
   resource :purpose, only: [:show]
