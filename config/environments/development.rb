@@ -1,11 +1,13 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.hosts << "dev.neolab.com"
+  config.hosts << 'localhost'
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.active_storage.service = :local
 
   config.consider_all_requests_local = true
 
@@ -22,20 +24,20 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join("tmp/caching-dev.txt").exist?
+  if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
-    if ENV["REDIS_CACHE_URL"].present?
-      puts "-- USING REDIS CACHE STORE --"
-      config.cache_store = :redis_cache_store, { url: ENV.fetch("REDIS_CACHE_URL") }
+    if ENV['REDIS_CACHE_URL'].present?
+      puts '-- USING REDIS CACHE STORE --'
+      config.cache_store = :redis_cache_store, { url: ENV.fetch('REDIS_CACHE_URL') }
     else
-      puts "-- USING MEMORY CACHE STORE --"
+      puts '-- USING MEMORY CACHE STORE --'
       config.cache_store = :memory_store
     end
 
     config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}"
+      'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
