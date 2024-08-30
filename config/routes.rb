@@ -16,9 +16,9 @@ Rails.application.routes.draw do
     resources :writings
     resources :presses
 
-    root to: "clients#index"
+    root to: 'clients#index'
 
-    mount Sidekiq::Web => "/sidekiq"
+    mount Sidekiq::Web => '/sidekiq'
   end
 
   namespace :api do
@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   resource :lessons, only: [:show]
   resource :studio_share, only: [:show]
   resource :kiln_share, only: [:show]
+  resource :terrarium_workshops, only: [:show]
   resource :store, only: [:show]
   resource :contact, only: [:show]
   resource :purpose, only: [:show]
