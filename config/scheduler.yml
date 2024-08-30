@@ -1,0 +1,4 @@
+heartbeat_job:
+  every: 1 minute
+  class: HeartbeatJob
+  queue: default

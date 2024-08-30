@@ -1,0 +1,11 @@
+development:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_CABLE_URL") %>
+
+test:
+  adapter: test
+
+production:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_CABLE_URL") %>
+  channel_prefix: wilhall_production

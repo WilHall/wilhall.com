@@ -1,0 +1,4 @@
+bundle install
+bundle exec rake vite:clobber assets:precompile db:migrate RAILS_ENV=production
+sudo systemctl restart nginx
+sudo systemctl restart sidekiq

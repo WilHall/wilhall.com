@@ -1,0 +1,104 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "@fortawesome/fontawesome-free/css/all";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: "Dreamboat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/assets/dreamboat.woff2") format('woff2');
+}
+
+* {
+  font-family: "Merriweather Sans"
+}
+
+table.sortable th {
+  @apply cursor-pointer;
+}
+
+th[aria-sort="descending"]::after {
+  content: "▼";
+}
+
+th[aria-sort="ascending"]::after {
+  content: "▲";
+}
+
+.panel {
+  order: 99;
+  display: none;
+  width: 100%;
+}
+
+input:checked + label + .panel {
+  display: block;
+}
+
+input:checked + label {
+  @apply border-blue-600;
+}
+
+input:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+
+.swatch-blue {
+  background-color: #3262d1;
+}
+
+.swatch-white {
+  background-color: #e5e5e5;
+}
+
+.swatch-pink {
+  background-color: #f59ec9;
+}
+
+.swatch-aqua {
+  background-color: #34cfc7;
+}
+
+.swatch-hot-pink {
+  background-color: #eb4a9b;
+}
+
+.swatch-violet {
+  background-color: #cd30d0;
+}
+
+.swatch-grey {
+  background-color: #8a8a8a;
+}
+
+.swatch-orange {
+  background-color: #dc6a40;
+}
+
+.swatch-red {
+  background-color: #d53c47;
+}
+
+.swatch-yellow {
+  background-color: #debb3f;
+}
+
+.swatch-lime {
+  background-color: #bcdb3a;
+}
+
+.swatch-green {
+  background-color: #469152;
+}
+
+.swatch-tan {
+  background-color: #b6a992;
+}
+
+.swatch-black {
+  background-color: #3f4041;
+}
