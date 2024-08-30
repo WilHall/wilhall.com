@@ -7,16 +7,14 @@
 <body>
 <main>
   <div class="flex flex-col justify-between items-center min-h-screen min-w-full">
-    <%= image_tag "/wave_top.png", class: "w-full" %>
-
     <div class="flex items-center bg-white border border-gray-200 rounded-lg shadow flex-row max-w-xl shadow-xl">
       <%= image_tag "/#{@status_code}.jpg", class: "object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48
       md:rounded-none md:rounded-s-lg" %>
       <div class="p-4">
         <%= yield %>
         <div class="flex rounded-md shadow-sm justify-center w-full mt-2">
-          <a href="mailto:support@neolab.com?subject=<%= @app_name %>%20<%= @status_code %>%20Error%20(<%= @request_id %>)&body=Describe%20what%20you%20were%20doing%20when%20the%20issue%20occurred..." class="text-center flex-1 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700">
-            Open Support Ticket
+          <a href="mailto:wil@wilhall.com" class="text-center flex-1 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700">
+            Let me know
           </a>
           <a href="/" class="text-center flex-1 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700">
             Go Back
@@ -24,8 +22,6 @@
         </div>
       </div>
     </div>
-
-    <%= image_tag "/wave_bottom.png", class: "w-full" %>
   </div>
 
 </main>
