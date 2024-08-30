@@ -1,4 +1,6 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
+
+export PATH="/Users/wilhall/.asdf/shims:$PATH"
 
 if ! gem list foreman -i --silent; then
   echo "Installing foreman..."
