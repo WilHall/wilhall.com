@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :users, except: [:destroy]
     resources :writings
     resources :presses
+    resources :clays
 
     root to: 'clients#index'
 
@@ -35,6 +36,7 @@ Rails.application.routes.draw do
   resources :presses, only: [:index]
   resource :lessons, only: [:show]
   resource :studio_share, only: [:show]
+  resource :studio, only: [:show]
   resource :kiln_share, only: [:show]
   resource :terrarium_workshops, only: [:show]
   resource :store, only: [:show]
