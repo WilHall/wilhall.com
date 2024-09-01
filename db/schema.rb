@@ -10,9 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_31_205133) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_01_152738) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "color", ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "white", "gray", "gold", "silver"]
+  create_enum "cone", ["04", "5", "6", "10"]
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -73,6 +78,30 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_31_205133) do
     t.index ["name"], name: "index_clients_on_name", unique: true
   end
 
+  create_table "glaze_combinations", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description", null: false
+    t.enum "primary_color", null: false, enum_type: "color"
+    t.bigint "first_glaze_id", null: false
+    t.bigint "second_glaze_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["first_glaze_id"], name: "index_glaze_combinations_on_first_glaze_id"
+    t.index ["second_glaze_id"], name: "index_glaze_combinations_on_second_glaze_id"
+  end
+
+  create_table "glazes", force: :cascade do |t|
+    t.string "identifier", null: false
+    t.string "name", null: false
+    t.string "description", null: false
+    t.boolean "food_safe", null: false
+    t.enum "primary_color", null: false, enum_type: "color"
+    t.enum "minimum_cone", null: false, enum_type: "cone"
+    t.enum "maximum_cone", null: false, enum_type: "cone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "presses", force: :cascade do |t|
     t.string "title", null: false
     t.string "description", null: false
@@ -111,4 +140,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_31_205133) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "glaze_combinations", "glazes", column: "first_glaze_id"
+  add_foreign_key "glaze_combinations", "glazes", column: "second_glaze_id"
 end

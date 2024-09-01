@@ -8,7 +8,7 @@ export default class extends Controller {
     const formData = new FormData(form);
 
     const params = new URLSearchParams(formData);
-    const newUrl = `${form.action}?${params.toString()}`;
+    const newUrl = `${form.action}?${params.toString()}${window.location.hash}`;
 
     if (this.reloadValue) {
       window.location.href = newUrl;

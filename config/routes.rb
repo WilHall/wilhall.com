@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :writings
     resources :presses
     resources :clays
+    resources :glazes
+    resources :glaze_combinations
 
     root to: 'clients#index'
 

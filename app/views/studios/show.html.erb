@@ -22,7 +22,7 @@
             Because my studio is in the basement of my home, studio access is scheduled based on my availability.
             </p>
             <p>
-            If you have a monthly membership, you'll have access to a scheduling link that does not require payment, and you can schedule as much time as you would like. Otherwise, time can be scheduled per-hour on my website.
+            If you have a monthly membership, you will have access to a scheduling link that does not require payment, and you can schedule as much time as you would like. Otherwise, time can be scheduled per-hour on my website.
             </p>
             <p>
             When arriving, text me or ring my smart doorbell, and then meet me at the end of the driveway to the left side of the house. I will let you directly into the studio.
@@ -199,7 +199,60 @@
         Glazes
     </label>
     <div class="panel my-5">
-        UNDER CONSTRUCTION
+        <%= form_with(url: studio_path, method: :get, data: { controller: "filter" }, class: "flex gap-3 w-full items-end flex-wrap") do %>
+            <div class="flex flex-col">
+            <%= label_tag :base_glaze, "Base Glaze", class: "font-bold" %>
+            <%= select_tag :base_glaze,
+                            options_for_select(@base_glaze_options,
+                                                selected: @selected_base_glaze),
+                            prompt: "Any",
+                            class: 'rounded-lg border-slate-300',
+                            data: { action: "change->filter#submit" } %>
+            </div>
+            <div class="flex flex-col">
+            <%= label_tag :primary_color, "Primary Color", class: "font-bold" %>
+            <%= select_tag :primary_color,
+                            options_for_select(@primary_color_options,
+                                                selected: @selected_primary_color),
+                            prompt: "Any",
+                            class: 'rounded-lg border-slate-300',
+                            data: { action: "change->filter#submit" } %>
+            </div>
+        <% end %>
+        <% if (@glazes + @glaze_combinations).empty? %>
+            <div class="text-center text-xl font-bold w-full my-5">No glazes found</div>
+        <% else %>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 my-5">
+                <% (@glazes + @glaze_combinations).each do |glaze| %>
+                    <div class="bg-white border border-slate-200 rounded-md">
+                        <img class="rounded-t-md" src="<%= url_for(glaze.test_tile_photo) %>" alt=""/>
+                        <div class="p-5">
+                            <h2 class="flex items-center gap-3 text-black text-2xl font-bold tracking-tight">
+                                <%= glaze.name %>
+                            </h2>
+                            <span class="text-secondary font-bold">
+                                <%= glaze.canonical_identifier %>
+                            </span>
+                            <div class="flex gap-3 items-center">
+                                <span class="flex gap-1 items-center">
+                                    <i class="block fa-solid fa-palette text-slate-500 text-lg"></i>
+                                    <%= glaze.primary_color.titleize %>
+                                </span>
+                                <span class="flex gap-1 items-center">
+                                    <i class="block fa-solid fa-fire text-slate-500 text-lg"></i>
+                                    <%= glaze.cone_range %>
+                                </span>
+                                <span class="flex gap-1 items-center">
+                                    <i class="block fa-solid fa-utensils text-slate-500 text-lg"></i>
+                                    <%= glaze.food_safe ? "Yes" : "No" %>
+                                </span>
+                            </div>
+                            <p class="my-3 font-normal text-sm text-slate-700"><%= glaze.description %></p>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        <% end %>
     </div>
 </div>
 
