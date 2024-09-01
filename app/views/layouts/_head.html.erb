@@ -11,6 +11,8 @@
 <% if content_for?(:meta) %>
     <%= yield(:meta) %>
 <% end %>
+<meta property="og:type" content="article" /> 
+<meta property="og:site_name" content="Wil Hall" />
 <%= csrf_meta_tags %>
 <%= csp_meta_tag %>
 
