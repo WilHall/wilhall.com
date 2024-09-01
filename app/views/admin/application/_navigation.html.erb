@@ -12,6 +12,11 @@ as defined by the routes in the `admin/` namespace
   <%= link_to(t("administrate.navigation.back_to_app"), root_url, class: "button button--alt button--nav") if defined?(root_url) %>
 
   <%= link_to(
+        "Google Search Console",
+        "https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Awilhall.com",
+        class: "navigation__link"
+      ) %>
+  <%= link_to(
         "Analytics",
         "https://us.umami.is/websites/4c1fd179-4dfa-4333-ab75-b8304cf3710a",
         class: "navigation__link"
