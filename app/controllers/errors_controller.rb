@@ -9,7 +9,12 @@ class ErrorsController < ApplicationController
       ActionDispatch::ExceptionWrapper.new(
         request.env, @exception
       ).status_code
-    render view_for_code(@status_code), status: @status_code
+
+    if @status_code == 404
+      redirect_to store_path
+    else
+      render view_for_code(@status_code), status: @status_code
+    end
   end
 
   private
