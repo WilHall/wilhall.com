@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  Wil Hall - Writing
+<% end %>
+
 <article class="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3">
   <% @writings.each do |writing| %>
     <a href="<%= writing.url %>" class="p-8 bg-white border border-gray-200 rounded-md shadow-xl hover:border-secondary">

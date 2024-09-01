@@ -1,4 +1,11 @@
-<title>Wil Hall - Ceramicist, Full Stack Web Developer</title>
+<title>
+<% if content_for?(:title) %>
+    <%= yield(:title) %>
+<% else %>
+    Wil Hall - Ceramicist, Full Stack Web Developer
+<% end %>
+</title>
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light only">
 <%= csrf_meta_tags %>

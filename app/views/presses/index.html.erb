@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  Wil Hall - Press
+<% end %>
+
 <article class="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3">
   <% @presses.each do |press| %>
     <a href="<%= press.url %>" class="bg-white border border-gray-200 rounded-md shadow-xl hover:border-secondary">
