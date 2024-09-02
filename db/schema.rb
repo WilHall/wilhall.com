@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_01_152738) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_02_155010) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -78,6 +78,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_01_152738) do
     t.index ["name"], name: "index_clients_on_name", unique: true
   end
 
+  create_table "decorations", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "glaze_combinations", force: :cascade do |t|
     t.string "name", null: false
     t.string "description", null: false
@@ -108,6 +115,39 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_01_152738) do
     t.string "url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "soils", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "succulents", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "terrariums", force: :cascade do |t|
+    t.string "customer_name", null: false
+    t.string "customer_email", null: false
+    t.bigint "decoration_id"
+    t.bigint "top_soil_id"
+    t.bigint "bottom_soil_id"
+    t.bigint "first_succulent_id"
+    t.bigint "second_succulent_id"
+    t.bigint "third_succulent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bottom_soil_id"], name: "index_terrariums_on_bottom_soil_id"
+    t.index ["decoration_id"], name: "index_terrariums_on_decoration_id"
+    t.index ["first_succulent_id"], name: "index_terrariums_on_first_succulent_id"
+    t.index ["second_succulent_id"], name: "index_terrariums_on_second_succulent_id"
+    t.index ["third_succulent_id"], name: "index_terrariums_on_third_succulent_id"
+    t.index ["top_soil_id"], name: "index_terrariums_on_top_soil_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -142,4 +182,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_01_152738) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "glaze_combinations", "glazes", column: "first_glaze_id"
   add_foreign_key "glaze_combinations", "glazes", column: "second_glaze_id"
+  add_foreign_key "terrariums", "decorations"
+  add_foreign_key "terrariums", "soils", column: "bottom_soil_id"
+  add_foreign_key "terrariums", "soils", column: "top_soil_id"
+  add_foreign_key "terrariums", "succulents", column: "first_succulent_id"
+  add_foreign_key "terrariums", "succulents", column: "second_succulent_id"
+  add_foreign_key "terrariums", "succulents", column: "third_succulent_id"
 end

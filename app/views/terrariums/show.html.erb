@@ -1,0 +1,130 @@
+<% content_for :title do %>
+  Wil Hall - Terrarium Workshops
+<% end %>
+<% content_for :meta do %>
+  <meta property="og:title" content="Wil Hall - Build a Terrarium Online" /> 
+  <meta property="og:description" content="Build and purchase your own custom terrarium online for local pickup or delivery using my online terrarium design tool." /> 
+  <meta property="og:image" content="https://wilhall.com/photos/terrarium_alt.png" />
+  <meta name="description" content="Build and purchase your own custom terrarium online for local pickup or delivery using my online terrarium design tool.">  
+<% end %>
+
+<article class="py-8 antialiased">
+  <div class="px-4 mx-auto max-w-2xl">
+    <h1 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
+      Terrarium Designer
+    </h1>
+    <div class="text-slate-500 prose py-3">
+      <p>
+        Alright <%= @terrarium.customer_name %>, let's design your terrarium! Choose your soil, succulent, and decoration options below.
+      </p>
+    </div>
+
+    <%= form_with model: @terrarium, url: @terrarium_url, method: :get, data: { controller: "filter" }, class: "flex flex-col gap-3" do |form| %>
+      <hr />
+      <div class="flex gap-5">
+        <div class="flex-1 flex flex-col justify-center gap-1">
+          <%= form.label :decoration_id, "Decoration", class: "font-bold" %>
+          <%= form.collection_select(:bottom_soil_id, Decoration.all, :id, :name, {prompt: true, selected: @selected_decoration&.id}, { data: { action: "change->filter#submit" } }) %>
+        </div>
+        <div class="flex-1 flex justify-end">
+          <div class="rounded-md shadow-md overflow-hidden">
+            <% if @selected_decoration.present? %>
+              <img class="h-32" src="<%= url_for(@selected_decoration.photo) %>" alt="" />
+            <% else %>
+              <img class="h-32" src="/photos/no_image.png" alt="" />
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex gap-5">
+        <div class="flex-1 flex flex-col justify-center gap-1">
+          <%= form.label :top_soil_id, "Top Soil", class: "font-bold" %>
+          <%= form.collection_select(:top_soil_id, Soil.all, :id, :name, {prompt: true, selected: @selected_top_soil&.id}, { data: { action: "change->filter#submit" } }) %>
+        </div>
+        <div class="flex-1 flex justify-end">
+          <div class="rounded-md shadow-md overflow-hidden">
+            <% if @selected_top_soil.present? %>
+              <img class="h-32" src="<%= url_for(@selected_top_soil.photo) %>" alt="" />
+            <% else %>
+              <img class="h-32" src="/photos/no_image.png" alt="" />
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex gap-5">
+        <div class="flex-1 flex flex-col justify-center gap-1">
+          <%= form.label :top_soil_id, "Bottom Soil", class: "font-bold" %>
+          <%= form.collection_select(:bottom_soil_id, Soil.all, :id, :name, {prompt: true, selected: @selected_bottom_soil&.id}, { data: { action: "change->filter#submit" } }) %>
+        </div>
+        <div class="flex-1 flex justify-end">
+          <div class="rounded-md shadow-md overflow-hidden">
+            <% if @selected_bottom_soil.present? %>
+              <img class="h-32" src="<%= url_for(@selected_bottom_soil.photo) %>" alt="" />
+            <% else %>
+              <img class="h-32" src="/photos/no_image.png" alt="" />
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex gap-5">
+        <div class="flex-1 flex flex-col justify-center gap-1">
+          <%= form.label :top_soil_id, "First Succulent", class: "font-bold" %>
+          <%= form.collection_select(:first_succulent_id, Succulent.all, :id, :name, {prompt: true, selected: @selected_first_succulent&.id}, { data: { action: "change->filter#submit" } }) %>
+        </div>
+        <div class="flex-1 flex justify-end">
+          <div class="rounded-md shadow-md overflow-hidden">
+            <% if @selected_first_succulent.present? %>
+              <img class="h-32" src="<%= url_for(@selected_first_succulent.photo) %>" alt="" />
+            <% else %>
+              <img class="h-32" src="/photos/no_image.png" alt="" />
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex gap-5">
+        <div class="flex-1 flex flex-col justify-center gap-1">
+          <%= form.label :top_soil_id, "Second Succulent", class: "font-bold" %>
+          <%= form.collection_select(:second_succulent_id, Succulent.all, :id, :name, {prompt: true, selected: @selected_second_succulent&.id}, { data: { action: "change->filter#submit" } }) %>
+        </div>
+        <div class="flex-1 flex justify-end">
+          <div class="rounded-md shadow-md overflow-hidden">
+            <% if @selected_second_succulent.present? %>
+              <img class="h-32" src="<%= url_for(@selected_second_succulent.photo) %>" alt="" />
+            <% else %>
+              <img class="h-32" src="/photos/no_image.png" alt="" />
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flex gap-5">
+        <div class="flex-1 flex flex-col justify-center gap-1">
+          <%= form.label :top_soil_id, "Third Succulent", class: "font-bold" %>
+          <%= form.collection_select(:third_succulent_id, Succulent.all, :id, :name, {prompt: true, selected: @selected_third_succulent&.id}, { data: { action: "change->filter#submit" } }) %>
+        </div>
+        <div class="flex-1 flex justify-end">
+          <div class="rounded-md shadow-md overflow-hidden">
+            <% if @selected_third_succulent.present? %>
+              <img class="h-32" src="<%= url_for(@selected_third_succulent.photo) %>" alt="" />
+            <% else %>
+              <img class="h-32" src="/photos/no_image.png" alt="" />
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr />
+    <% end %>
+    <%= form_with url: @terrarium_url, method: :patch, class: "my-5 flex justify-center" do |form| %>
+      <%= hidden_field_tag(:decoration_id, @selected_decoration&.id) %>
+      <%= hidden_field_tag(:top_soil_id, @selected_top_soil&.id) %>
+      <%= hidden_field_tag(:bottom_soil_id, @selected_bottom_soil&.id) %>
+      <%= hidden_field_tag(:first_succulent_id, @selected_first_succulent&.id) %>
+      <%= hidden_field_tag(:second_succulent_id, @selected_second_succulent&.id) %>
+      <%= hidden_field_tag(:third_succulent_id, @selected_third_succulent&.id) %>
+      <%= form.submit "Place your order", class: "cursor-pointer flex items-center justify-center py-2.5 px-5 text-sm font-bold text-white focus:outline-none bg-secondary rounded-lg border border-gray-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100" %>
+    <% end %>
+</article>

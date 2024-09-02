@@ -18,6 +18,10 @@ Rails.application.routes.draw do
     resources :clays
     resources :glazes
     resources :glaze_combinations
+    resources :terrariums, only: [:index, :show]
+    resources :soils
+    resources :decorations
+    resources :succulents
 
     root to: 'clients#index'
 
@@ -41,6 +45,7 @@ Rails.application.routes.draw do
   resource :studio, only: [:show]
   resource :kiln_share, only: [:show]
   resource :terrarium_workshops, only: [:show]
+  resources :terrariums, except: [:destroy]
   resource :store, only: [:show]
   resource :contact, only: [:show]
   resource :purpose, only: [:show]
