@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://cloudconvert.com/
-HostUrl=https://us-east.storage.cloudconvert.com/tasks/7dfc94bc-7165-4033-a0b1-d61ab5624928/background.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240830%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20240830T115756Z&X-Amz-Expires=86400&X-Amz-Signature=0fcd9e7f40dd36a82f06e6faaa2cc5f4d4b25c29b1730ee664a694f2eb783be0&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22background.png%22&response-content-type=image%2Fpng&x-id=GetObject
