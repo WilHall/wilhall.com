@@ -1,4 +1,6 @@
 class TerrariumsController < ApplicationController
+  layout 'wizard', only: [:new, :show]
+
   def index
     render
   end

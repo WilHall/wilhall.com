@@ -10,7 +10,7 @@
 
 <article class="py-8 antialiased">
   <div class="px-4 mx-auto max-w-2xl">
-    <h1 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
+    <h1 id="terrarium_designer" class="text-2xl font-semibold text-gray-900 sm:text-3xl">
       Terrarium Designer
     </h1>
     <div class="text-slate-500 prose py-3">
@@ -43,7 +43,7 @@
           <%= form.collection_select(:top_soil_id, Soil.all, :id, :name, {prompt: true, selected: @selected_top_soil&.id}, { data: { action: "change->filter#submit" } }) %>
         </div>
         <div class="flex-1 flex justify-end">
-          <div class="rounded-md shadow-md overflow-hidden">
+          <div class="rounded-md shadow-md overflow-hidden relative">
             <% if @selected_top_soil.present? %>
               <img class="h-32" src="<%= url_for(@selected_top_soil.photo) %>" alt="" />
             <% else %>
