@@ -24,7 +24,7 @@
       <div class="flex gap-5">
         <div class="flex-1 flex flex-col justify-center gap-1">
           <%= form.label :decoration_id, "Decoration", class: "font-bold" %>
-          <%= form.collection_select(:bottom_soil_id, Decoration.all, :id, :name, {prompt: true, selected: @selected_decoration&.id}, { data: { action: "change->filter#submit" } }) %>
+          <%= form.collection_select(:decoration_id, Decoration.all, :id, :name, {prompt: true, selected: @selected_decoration&.id}, { data: { action: "change->filter#submit" } }) %>
         </div>
         <div class="flex-1 flex justify-end">
           <div class="rounded-md shadow-md overflow-hidden">
