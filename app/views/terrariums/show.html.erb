@@ -10,10 +10,10 @@
 
 <article class="py-8 antialiased">
   <div class="px-4 mx-auto max-w-2xl">
-    <h1 id="terrarium_designer" class="text-2xl font-semibold text-gray-900 sm:text-3xl">
+    <h1 id="terrarium_designer" class="text-2xl font-semibold text-slate-900 sm:text-3xl">
       Terrarium Designer
     </h1>
-    <div class="text-slate-500 prose py-3">
+    <div class="text-slate-700 prose py-3">
       <p>
         Alright <%= @terrarium.customer_name %>, let's design your terrarium! Choose your soil, succulent, and decoration options below.
       </p>
@@ -125,6 +125,6 @@
       <%= hidden_field_tag(:first_succulent_id, @selected_first_succulent&.id) %>
       <%= hidden_field_tag(:second_succulent_id, @selected_second_succulent&.id) %>
       <%= hidden_field_tag(:third_succulent_id, @selected_third_succulent&.id) %>
-      <%= form.submit "Place your order", class: "cursor-pointer flex items-center justify-center py-2.5 px-5 text-sm font-bold text-white focus:outline-none bg-secondary rounded-lg border border-gray-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100" %>
+      <%= form.submit "Place your order", class: "cursor-pointer flex items-center justify-center py-2.5 px-5 text-sm font-bold text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100" %>
     <% end %>
 </article>

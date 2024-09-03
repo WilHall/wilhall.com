@@ -17,13 +17,13 @@
 
       <div class="mt-6 sm:mt-8 lg:mt-0">
         <h1
-          class="text-2xl font-semibold text-gray-900 sm:text-3xl"
+          class="text-2xl font-semibold text-slate-900 sm:text-3xl"
         >
           Pottery Lessons
         </h1>
         <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
           <p
-            class="text-xl font-bold text-gray-900 sm:text-2xl"
+            class="text-xl font-bold text-slate-900 sm:text-2xl"
           >
           $70<small>/person</small>
           </p>
@@ -34,7 +34,7 @@
             data-umami-event="Pottery Lesson - Schedule For One Person"
             href="https://savvycal.com/wilhall/cbc24877"
             target="_blank"
-            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-gray-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
+            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
           >
             Schedule for One Person
@@ -43,7 +43,7 @@
             data-umami-event="Pottery Lesson - Schedule For Two People"
             href="https://savvycal.com/wilhall/7f2e2ead"
             target="_blank"
-            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-gray-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
+            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
           >
             Schedule for Two People
@@ -53,16 +53,16 @@
         <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
           <a
             href="<%= studio_path %>"
-            class="flex items-center justify-center py-1 px-3 text-sm text-secondary font-medium focus:outline-none bg-white rounded-lg border-2 border-secondary hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
+            class="flex items-center justify-center py-1 px-3 text-sm text-secondary font-medium focus:outline-none bg-white rounded-lg border-2 border-secondary hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
           >
             Studio Information
           </a>
         </div>
 
-        <hr class="my-6 md:my-8 border-gray-200"/>
+        <hr class="my-6 md:my-8 border-slate-200"/>
 
-        <div class="text-slate-500 prose">
+        <div class="text-slate-700 prose">
           <p>
             A private wheel-throwing pottery lesson taught out of my home studio in Somerville, MA near Davis Square -
             no
@@ -88,7 +88,7 @@
             <li>You can expect a minimum of three weeks for your pots to be fired and ready for decorating</li>
             <li>You can choose to just come for throwing and choose a glaze to have me apply and fire it for you, or you
               can
-              come back for another lesson to decorate together (see Glaze Options)
+              come back for another lesson to decorate together (see <%= link_to "Glaze Options", studio_path(anchor: "glazes") %>)
             </li>
             <li>In the meantime, you are welcome to schedule additional throwing lessons</li>
             <li>Once your pieces are ready for pickup, you may pick them up at a future lesson or Schedule a Pickup</li>
@@ -105,7 +105,7 @@
               come back for another lesson to decorate together.
             </li>
             <li>Once your pieces are ready for pickup, you may pick them up at a future lesson or Schedule a Pickup</li>
-            <li>After a minimum of 5 lessons, you are eligible for my Studio Share.</li>
+            <li>After a minimum of 5 lessons, you are eligible for my <%= link_to "Studio Share", studio_share_path %>.</li>
           </ul>
 
         </div>

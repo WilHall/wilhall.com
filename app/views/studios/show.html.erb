@@ -6,10 +6,10 @@
     <%= render 'shared/plume_and_pith_logo' %>
 <% end %>
 
-<div class="flex flex-wrap font-medium text-slate-500 bg-white rounded-md shadow-lg border border-slate-200 py-2 px-5">
+<div class="flex flex-wrap font-medium text-slate-700 bg-white rounded-md shadow-lg border border-slate-200 py-2 px-5">
     <input name="tabs" tabindex="1" type="radio" id="#guide" class="absolute cursor-pointer w-0 opacity-0"/>
     <label for="#guide" class="cursor-pointer inline-flex items-center justify-center gap-2 p-4 font-bold border-b-2 border-transparent rounded-t-lg hover:text-slate-600 hover:border-slate-300 border-blue-600">
-        <i class="block fa-solid fa-book text-slate-500 text-xl"></i>
+        <i class="block fa-solid fa-book text-slate-700 text-xl"></i>
         Guide
     </label>
     <div class="panel my-5">
@@ -199,7 +199,7 @@
 
     <input name="tabs" tabindex="1" type="radio" id="#glazes" class="absolute cursor-pointer w-0 opacity-0"/>
     <label for="#glazes" class="cursor-pointer inline-flex items-center justify-center gap-2 p-4 font-bold border-b-2 border-transparent rounded-t-lg hover:text-slate-600 hover:border-slate-300 border-blue-600">
-        <i class="block fa-solid fa-flask text-slate-500 text-xl"></i>
+        <i class="block fa-solid fa-flask text-slate-700 text-xl"></i>
         Glazes
     </label>
     <div class="panel my-5">
@@ -239,15 +239,15 @@
                             </span>
                             <div class="flex gap-3 items-center">
                                 <span class="flex gap-1 items-center">
-                                    <i class="block fa-solid fa-palette text-slate-500 text-lg"></i>
+                                    <i class="block fa-solid fa-palette text-slate-700 text-lg"></i>
                                     <%= glaze.primary_color.titleize %>
                                 </span>
                                 <span class="flex gap-1 items-center">
-                                    <i class="block fa-solid fa-fire text-slate-500 text-lg"></i>
+                                    <i class="block fa-solid fa-fire text-slate-700 text-lg"></i>
                                     <%= glaze.cone_range %>
                                 </span>
                                 <span class="flex gap-1 items-center">
-                                    <i class="block fa-solid fa-utensils text-slate-500 text-lg"></i>
+                                    <i class="block fa-solid fa-utensils text-slate-700 text-lg"></i>
                                     <%= glaze.food_safe ? "Yes" : "No" %>
                                 </span>
                             </div>

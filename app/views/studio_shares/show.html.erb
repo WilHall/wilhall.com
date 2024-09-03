@@ -17,13 +17,13 @@
 
       <div class="mt-6 sm:mt-8 lg:mt-0">
         <h1
-          class="text-2xl font-semibold text-gray-900 sm:text-3xl"
+          class="text-2xl font-semibold text-slate-900 sm:text-3xl"
         >
           Pottery Studio Share
         </h1>
         <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
           <p
-            class="text-xl font-bold text-gray-900 sm:text-2xl"
+            class="text-xl font-bold text-slate-900 sm:text-2xl"
           >
           $25/hr <small>(or $220/mo)</small>
           </p>
@@ -34,7 +34,7 @@
             data-umami-event="Studio Share - Schedule per hour"
             href="https://savvycal.com/wilhall/6a97fff2"
             target="_blank"
-            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-gray-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
+            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
           >
             Schedule per hour
@@ -43,7 +43,7 @@
             data-umami-event="Studio Share - Start a Monthly Subscription"
             href="https://buy.stripe.com/cN2bJ78Gi8rY1Nu9AA"
             target="_blank"
-            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-gray-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
+            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
           >
             Start a Monthly Subscription
@@ -53,16 +53,16 @@
         <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
           <a
             href="<%= studio_path %>"
-            class="flex items-center justify-center py-1 px-3 text-sm text-secondary font-medium focus:outline-none bg-white rounded-lg border-2 border-secondary hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
+            class="flex items-center justify-center py-1 px-3 text-sm text-secondary font-medium focus:outline-none bg-white rounded-lg border-2 border-secondary hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
           >
             Studio Information
           </a>
         </div>
 
-        <hr class="my-6 md:my-8 border-gray-200"/>
+        <hr class="my-6 md:my-8 border-slate-200"/>
 
-        <div class="text-slate-500 prose">
+        <div class="text-slate-700 prose">
           <p>
             With this timeshare, you can book my home ceramics studio in 2h increments or start an unlimited access subscription
             to throw, trim, or decorate your own pottery. This does not include any instruction, but does include clay,
@@ -82,9 +82,9 @@
               Stoneware 563, Warm Buff 553, or VP Porcelain 551, or my recycled mix of these. You may purchase
               additional clay at a rate of $1.50/lb in 4lb increments.
             </li>
-            <li>Use of all my glazes (See Glaze Options)</li>
+            <li>Use of all my glazes (See <%= link_to "Glaze Options", studio_path(anchor: "glazes") %>)</li>
             <li>Use of my other consumables such as underglazes</li>
-            <li>Bisque and glaze firing for all pieces you produce, at 50% off my Kiln Share cost</li>
+            <li>Bisque and glaze firing for all pieces you produce, at 50% off my <%= link_to "Kiln Share", kiln_share_path %> cost</li>
             <li>Shared throwing and decorating tools</li>
             <li>You may bring your own underglazes and glazes</li>
             <li>For monthly subscribers: Dedicated shelf storage anything you would like</li>

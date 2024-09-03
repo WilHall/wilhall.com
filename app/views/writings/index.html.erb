@@ -4,11 +4,11 @@
 
 <article class="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3">
   <% @writings.each do |writing| %>
-    <a href="<%= writing.url %>" class="p-8 bg-white border border-gray-200 rounded-md shadow-xl hover:border-secondary">
+    <a href="<%= writing.url %>" class="p-8 bg-white border border-slate-200 rounded-md shadow-xl hover:border-secondary">
       <h2 class="flex items-center gap-3 mb-2 text-2xl font-bold tracking-tight text-secondary">
         <span><%= writing.title %></span>
         <i class="text-2xl fa-solid fa-chevron-right"></i></h2>
-      <p class="mb-3 font-normal text-gray-700"><%= writing.description %></p>
+      <p class="mb-3 font-normal text-slate-700"><%= writing.description %></p>
     </a>
   <% end %>
 </article>
