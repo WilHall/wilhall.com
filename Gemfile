@@ -28,6 +28,7 @@ gem 'vite_rails'
 gem 'devise'
 gem "duration_in_words"
 gem 'tzinfo-data', platforms: %i[ruby jruby]
+gem 'sitemap_generator'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri ruby]
