@@ -27,6 +27,7 @@
     "svelte-multiselect": "^10.3.0",
     "svelte-persisted-store": "^0.11.0",
     "svelte-sortable-flat-list-view": "^1.0.0",
+    "swiper": "^11.1.12",
     "trix": "^2.1.0"
   },
   "scripts": {

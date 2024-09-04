@@ -2,6 +2,9 @@ import "../controllers";
 import "sortable-tablesort/sortable.min.js";
 import "@hotwired/turbo-rails";
 import "chartkick/chart.js"; // Example: Load Rails libraries in Vite.
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // Example: Load Rails libraries in Vite.
 //

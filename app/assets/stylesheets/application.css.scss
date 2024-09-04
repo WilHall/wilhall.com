@@ -2,18 +2,22 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "@fortawesome/fontawesome-free/css/all";
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 @font-face {
   font-family: "Dreamboat";
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/dreamboat.woff2") format('woff2');
+  src: url("/dreamboat.woff2") format("woff2");
 }
 
 * {
-  font-family: "Merriweather Sans"
+  font-family: "Merriweather Sans";
+}
+
+:focus {
+  outline: 3px solid #257294 !important;
 }
 
 table.sortable th {
@@ -45,7 +49,6 @@ input:checked + label {
 input:disabled {
   @apply opacity-50 cursor-not-allowed;
 }
-
 
 .swatch-blue {
   background-color: #3262d1;
