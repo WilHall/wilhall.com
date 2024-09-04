@@ -367,6 +367,13 @@
   resolved "https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz"
   integrity sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==
 
+"@stimulus-components/lightbox@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus-components/lightbox/-/lightbox-4.0.0.tgz#dbe56146a3d14582a13e568406292d52aa56cbb0"
+  integrity sha512-pj4PfnGANbc3Ef6I/5aPeRS8Tj2rK1b9dn8rlpJZs1K9narqM57ZtUTutHZsnOv95+4LqQVktj+auMgz+LKzjw==
+  dependencies:
+    lightgallery "^2.7.2"
+
 "@svelte-plugins/tooltips@^3.0.1":
   version "3.0.1"
   resolved "https://registry.npmjs.org/@svelte-plugins/tooltips/-/tooltips-3.0.1.tgz"
@@ -1009,6 +1016,11 @@ kleur@^4.1.5:
   version "4.1.5"
   resolved "https://registry.npmjs.org/kleur/-/kleur-4.1.5.tgz"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
+
+lightgallery@^2.7.2:
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/lightgallery/-/lightgallery-2.7.2.tgz#9309216986fbce60602b851e1ef80cf40769c3d3"
+  integrity sha512-Ewdcg9UPDqV0HGZeD7wNE4uYejwH2u0fMo5VAr6GHzlPYlhItJvjhLTR0cL0V1HjhMsH39PAom9iv69ewitLWw==
 
 lilconfig@^2.1.0:
   version "2.1.0"

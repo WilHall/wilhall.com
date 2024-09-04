@@ -5,6 +5,7 @@ import "chartkick/chart.js"; // Example: Load Rails libraries in Vite.
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "lightgallery/css/lightgallery.css";
 
 // Example: Load Rails libraries in Vite.
 //
