@@ -6,6 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "lightgallery/css/lightgallery.css";
+import lightGallery from "lightgallery";
+
+window.lightGallery = lightGallery;
 
 // Example: Load Rails libraries in Vite.
 //

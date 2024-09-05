@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_02_155010) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_05_142355) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_02_155010) do
   # Note that some types may not work with other database engines. Be careful if changing database.
   create_enum "color", ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "white", "gray", "gold", "silver"]
   create_enum "cone", ["04", "5", "6", "10"]
+  create_enum "photo_category", ["portrait", "landscape", "other"]
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -105,6 +106,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_02_155010) do
     t.enum "primary_color", null: false, enum_type: "color"
     t.enum "minimum_cone", null: false, enum_type: "cone"
     t.enum "maximum_cone", null: false, enum_type: "cone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.enum "category", null: false, enum_type: "photo_category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

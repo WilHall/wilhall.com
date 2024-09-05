@@ -1,0 +1,94 @@
+<% content_for :title do %>
+  Wil Hall - Photography
+<% end %>
+<% content_for :meta do %>
+  <meta property="og:title" content="Wil Hall - Photography" /> 
+  <meta property="og:description" content="A portfolio of my photography." /> 
+  <meta property="og:image" content="https://wilhall.com/photos/studio.png" />
+  <meta name="description" content="A portfolio of my photography.">  
+<% end %>
+
+<article class="antialiased">
+
+  <div class="flex flex-wrap font-medium text-slate-700 bg-white rounded-md shadow-lg border border-slate-200 py-2 px-5">
+    <input name="tabs" tabindex="1" type="radio" id="#portraits" class="absolute cursor-pointer w-0 opacity-0"/>
+    <label for="#portraits" class="cursor-pointer inline-flex items-center justify-center gap-2 p-4 font-bold border-b-2 border-transparent rounded-t-lg hover:text-slate-600 hover:border-slate-300 border-blue-600">
+        <i class="block fa-solid fa-image-portrait text-slate-700 text-xl"></i>
+        Portraits
+    </label>
+    <div class="panel my-5">
+      <div class="lightgallery grid grid-cols-2 md:grid-cols-3 gap-4">
+          <% @portraits.each do |portrait| %>
+            <a href="<%= url_for(portrait.photo) %>">
+              <img class="h-auto max-w-full rounded-md border-2 border-transparent hover:border-secondary" src="<%= url_for(portrait.photo) %>" alt="">
+            </a>
+          <% end %>
+      </div>
+    </div>
+
+    <input name="tabs" tabindex="1" type="radio" id="#landscapes" class="absolute cursor-pointer w-0 opacity-0"/>
+    <label for="#landscapes" class="cursor-pointer inline-flex items-center justify-center gap-2 p-4 font-bold border-b-2 border-transparent rounded-t-lg hover:text-slate-600 hover:border-slate-300 border-blue-600">
+        <i class="block fa-solid fa-panorama text-slate-700 text-xl"></i>
+        Landscapes
+    </label>
+    <div class="panel my-5">
+      <div class="lightgallery grid grid-cols-2 md:grid-cols-3 gap-4">
+          <% @landscapes.each do |landscape| %>
+            <a href="<%= url_for(landscape.photo) %>">
+              <img class="h-auto max-w-full rounded-md border-2 border-transparent hover:border-secondary" src="<%= url_for(landscape.photo) %>" alt="">
+            </a>
+          <% end %>
+      </div>
+    </div>
+
+    <input name="tabs" tabindex="1" type="radio" id="#other" class="absolute cursor-pointer w-0 opacity-0"/>
+    <label for="#other" class="cursor-pointer inline-flex items-center justify-center gap-2 p-4 font-bold border-b-2 border-transparent rounded-t-lg hover:text-slate-600 hover:border-slate-300 border-blue-600">
+        <i class="block fa-solid fa-object-group text-slate-700 text-xl"></i>
+        Other
+    </label>
+    <div class="panel my-5">
+      <div class="lightgallery grid grid-cols-2 md:grid-cols-3 gap-4">
+          <% @others.each do |other| %>
+            <a href="<%= url_for(other.photo) %>">
+              <img class="h-auto max-w-full rounded-md border-2 border-transparent hover:border-secondary" src="<%= url_for(other.photo) %>" alt="">
+            </a>
+          <% end %>
+      </div>
+    </div>
+  </div>
+
+
+</article>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll(".lightgallery").forEach(function(el) {
+      lightGallery(el, {
+          speed: 500,
+          licenseKey: '0000-0000-000-0000'
+      });
+    });
+
+    const selectTargetedTab = () => {
+        const targetTab = document.querySelector(`input[name="tabs"][id="${window.location.hash}"]`)
+        if (targetTab) {
+            targetTab.checked = true;
+        }
+    }
+
+    window.addEventListener("hashchange", selectTargetedTab);
+
+    if (window.location.hash.length <= 1) {
+        document.querySelector(`input[name="tabs"][id="#portraits"]`).click()
+    }
+
+    document.querySelectorAll('input[name="tabs"]').forEach((elem) => {
+        elem.addEventListener('click', (event) => {
+            history.replaceState({}, '', elem.getAttribute('id'));
+            selectTargetedTab();
+        })
+    });
+
+    selectTargetedTab()
+  });
+</script>

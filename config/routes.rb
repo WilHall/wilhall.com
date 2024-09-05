@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :clients, except: [:destroy]
     resources :users, except: [:destroy]
     resources :writings
+    resources :photos
     resources :presses
     resources :clays
     resources :glazes
@@ -40,6 +41,7 @@ Rails.application.routes.draw do
   resource :about, only: [:show]
   resources :writings, only: [:index]
   resources :presses, only: [:index]
+  resource :photography, only: [:show]
   resource :lessons, only: [:show]
   resource :studio_share, only: [:show]
   resource :studio, only: [:show]
