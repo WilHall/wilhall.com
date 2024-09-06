@@ -19,8 +19,7 @@ On Ubuntu
 
 ## Hosting Setup
 
-Ubuntu 24.04
-Install as root
+Ubuntu 24.04 install dependencies as root
 
 1. `sudo apt-get install locate postgresql nginx build-essential checkinstall libvips zlib1g-dev libssl-dev libffi-dev libtool libyaml-dev libcurl4-openssl-dev libpq-dev dirmngr gnupg npm dirmngr gnupg apt-transport-https ca-certificates curl gnupg apt-transport-https redis-server`
 1. Follow https://www.phusionpassenger.com/docs/advanced_guides/install_and_upgrade/nginx/install/oss/noble.html
