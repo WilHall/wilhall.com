@@ -25,37 +25,37 @@
     <nav>
       <ul class="flex gap-5 justify-center flex-wrap">
         <li>
-          <a href="<%= about_path %>" class="font-dreamboat font-bold text-lg text-secondary hover:underline <%= controller_path == 'abouts' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
+          <a href="<%= about_path %>" class="font-dreamboat font-bold text-lg text-secondary drop-shadow-sm hover:underline decoration-4 underline-offset-8 <%= controller_path == 'abouts' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
             About
           </a>
         </li>
         <li>
-          <a href="<%= writings_path %>" class="font-dreamboat font-bold text-lg text-secondary hover:underline <%= controller_path == 'writings' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
+          <a href="<%= writings_path %>" class="font-dreamboat font-bold text-lg text-secondary drop-shadow-sm hover:underline decoration-4 underline-offset-8 <%= controller_path == 'writings' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
             Writing
           </a>
         </li>
         <li>
-          <a href="<%= photography_path %>" class="font-dreamboat font-bold text-lg text-secondary hover:underline <%= controller_path == 'photographies' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
+          <a href="<%= photography_path %>" class="font-dreamboat font-bold text-lg text-secondary drop-shadow-sm hover:underline decoration-4 underline-offset-8 <%= controller_path == 'photographies' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
             Photography
           </a>
         </li>
         <li>
-          <a href="<%= presses_path %>" class="font-dreamboat font-bold text-lg text-secondary hover:underline <%= controller_path == 'presses' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
+          <a href="<%= presses_path %>" class="font-dreamboat font-bold text-lg text-secondary drop-shadow-sm hover:underline decoration-4 underline-offset-8 <%= controller_path == 'presses' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
             Press
           </a>
         </li>
         <li>
-          <a href="<%= store_path %>" class="font-dreamboat font-bold text-lg text-secondary hover:underline <%= controller_path == 'stores' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
+          <a href="<%= store_path %>" class="font-dreamboat font-bold text-lg text-secondary drop-shadow-sm hover:underline decoration-4 underline-offset-8 <%= controller_path == 'stores' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
             Store
           </a>
         </li>
         <li>
-          <a href="<%= contact_path %>" class="font-dreamboat font-bold text-lg text-secondary hover:underline <%= controller_path == 'contacts' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
+          <a href="<%= contact_path %>" class="font-dreamboat font-bold text-lg text-secondary drop-shadow-sm hover:underline decoration-4 underline-offset-8 <%= controller_path == 'contacts' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
             Contact
           </a>
         </li>
         <li>
-          <a href="<%= purpose_path %>" class="font-dreamboat font-bold text-lg text-secondary hover:underline <%= controller_path == 'purposes' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
+          <a href="<%= purpose_path %>" class="font-dreamboat font-bold text-lg text-secondary drop-shadow-sm hover:underline decoration-4 underline-offset-8 <%= controller_path == 'purposes' ? 'underline decoration-wavy decoration-3 underline-offset-4 decoration-tertiary' : '' %>">
             Purpose
           </a>
         </li>
@@ -93,6 +93,7 @@
 <footer class="flex flex-col justify-center">
   <img src="/divider_bottom.png" class="h-5 my-5 mx-auto" role="presentation" alt=""/>
   <div class="w-min mx-auto">
+    <div class="mb-1 font-bold">Sign up for my newsletter:</div>
     <iframe src="https://embeds.beehiiv.com/eab29e6f-f01c-4a79-86c5-4d5ab6f06f69?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
   </div>
   <small class=" py-5 text-center">© 2024, Wil Hall</small>
