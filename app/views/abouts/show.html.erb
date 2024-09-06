@@ -1,14 +1,57 @@
-<article class="max-w-md rounded-md shadow-lg bg-white mx-auto px-5 py-10 text-lg text-slate-700 leading-relaxed text-center flex flex-col gap-3">
-  <p>
-    Wil Hall is a ceramicist, photographer, and Full Stack Web Developer based in Somerville. They specialize in
-    building intuitive and accessible user interfaces, one-of-a-kind handmade ceramics, and succulents along with other
-    pieces for the home and kitchen.
-  </p>
-  <p>
-    If you want to work with me,
-    <a href="<%= contact_path %>" class="text-secondary hover:underline">let's get in touch</a>. I offer a sliding scale
-    and
-    volunteer-based work for social justice initiatives, as well as for individuals who specialize in working with queer
-    communities.
-  </p>
+<% content_for :logo do %>
+  <span></span>
+<% end %>
+
+<article class="grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-5xl mx-auto w-full flex-1">
+  <div class="rounded-md shadow-lg bg-white ml-5 mt-16 px-5 pt-2 pb-10 text-lg text-slate-700 leading-relaxed flex flex-col gap-3">
+    <div class="flex items-center gap-5 relative">
+      <div class="absolute -top-10 -left-10 w-28 h-28 shrink-0 flex flex-col items-center justify-center rounded-full overflow-hidden bg-primary shadow-border-primary">
+        <img src="/logo.png" class="w-full h-full" role="presentation" alt=""/>
+      </div>
+      <div class="flex flex-col pl-24">
+        <span class="font-serif text-xl font-bold">Wil Hall</span>
+        <span class="text-primary">they/them</span>
+        <span class="text-slate-700 text-sm">Ceramicist ⁂ Photographer ⁂ Full Stack Web Developer</span>
+      </div>
+    </div>
+    <p>
+      Wil Hall is a ceramicist, photographer, and Full Stack Web Developer based in Somerville. They specialize in
+      building intuitive and accessible user interfaces, collaborating with development teams small and large, and
+      writing readable and pragmatic code.
+    </p>
+    <p>
+      If you want to work with me,
+      <a href="<%= contact_path %>" class="text-secondary hover:underline">let's get in touch</a>. I offer a sliding
+      scale
+      and
+      volunteer-based work for social justice initiatives, as well as for individuals who specialize in working with
+      queer
+      communities.
+    </p>
+  </div>
+  <div class="rounded-md shadow-lg bg-white ml-5 mt-16 px-5 pt-2 pb-10 text-lg text-slate-700 leading-relaxed flex flex-col gap-3">
+    <div class="flex items-center gap-5 relative">
+      <div class="absolute -top-10 -left-10 w-28 h-28 shrink-0 flex flex-col items-center justify-center rounded-full overflow-hidden bg-[#f8f8f8] shadow-border-bg">
+        <img src="/plumepith_logo_primary.png" class="w-full h-full" role="presentation" alt=""/>
+      </div>
+      <div class="flex flex-col justify-center pl-20">
+        <div><img src="/plumepith_logo_secondary.png" class="h-14 mx-auto" role="presentation" alt=""/></div>
+        <span class="font-dreamboat text-secondary text-center text-sm">Small-batch ceramics and succulents</span>
+      </div>
+    </div>
+    <p>
+      Plume & Pith brings a pop of color and liveliness to your home or office with one-of-a-kind small-batch ceramics
+      paired with succulents and other houseplants.
+    </p>
+    <p>
+      Looking for a custom order or want to invite me to pop-up at an event with plants and ceramics?
+      <a href="<%= contact_path %>" class="text-secondary hover:underline">I'm just a message away.</a>
+    </p>
+    <p>
+      Additionally I teach <a href="<%= lessons_path %>" class="text-secondary hover:underline">Lessons</a> out of my
+      studio and share my space via my
+      <a href="<%= studio_share_path %>" class="text-secondary hover:underline">Studio Share</a> and
+      <a href="<%= kiln_share_path %>" class="text-secondary hover:underline">Kiln Share</a>.
+    </p>
+  </div>
 </article>

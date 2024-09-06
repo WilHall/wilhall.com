@@ -2,7 +2,9 @@
   Wil Hall - Contact
 <% end %>
 
-<article class="max-w-md rounded-md shadow-lg bg-white mx-auto px-5 py-10 text-lg text-slate-800 leading-relaxed text-center flex flex-col gap-3">
+<article class="max-w-md rounded-md shadow-lg bg-white mx-auto px-5 py-10 text-lg text-slate-800 leading-relaxed flex flex-col gap-3">
+  <h2 class="font-bold text-xl">How you can reach me:</h2>
+  <hr/>
   <ul class="flex flex-col gap-3">
     <li class="flex justify-start items-center">
       <a href="mailto:wil@wilhall.com" class="flex gap-2 items-center hover:underline hover:opacity-80">
@@ -45,4 +47,21 @@
       </a>
     </li>
   </ul>
+  <h2 class="font-bold text-xl pt-5">Send me a message:</h2>
+  <hr/>
+  <%= form_with url: contact_path, method: :put, class: "flex flex-col gap-2" do |form| %>
+    <div class="flex flex-col gap-1">
+      <%= form.label :name, "Your Name" %>
+      <%= form.text_field :name %>
+    </div>
+    <div class="flex flex-col gap-1">
+      <%= form.label :email, "Your Email" %>
+      <%= form.text_field :email %>
+    </div>
+    <div class="flex flex-col gap-1">
+      <%= form.label :message, "Message" %>
+      <%= form.text_area :message %>
+    </div>
+    <%= form.submit "Send Message", class: "cursor-pointer flex items-center justify-center py-2.5 px-5 text-sm font-bold text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100" %>
+  <% end %>
 </article>

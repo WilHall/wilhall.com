@@ -19,6 +19,7 @@ module.exports = {
       },
       boxShadow: {
         "border-primary": "0 0 0 5px #8694C9, 2px 3px 5px 2px #555",
+        "border-bg": "0 0 0 5px #f8f8f8, 2px 3px 5px 2px #555",
       },
       fontFamily: {
         serif: ["Merriweather", ...defaultTheme.fontFamily.serif],

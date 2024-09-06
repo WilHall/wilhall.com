@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   resource :terrarium_workshops, only: [:show]
   resources :terrariums, except: [:destroy]
   resource :store, only: [:show]
-  resource :contact, only: [:show]
+  resource :contact, only: [:show, :update]
   resource :purpose, only: [:show]
   root to: 'abouts#show'
 end
