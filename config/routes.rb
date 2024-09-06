@@ -45,6 +45,8 @@ Rails.application.routes.draw do
   resource :lessons, only: [:show]
   resource :studio_share, only: [:show]
   resource :studio, only: [:show]
+  resource :engineering_resume, only: [:show]
+  resource :ceramics_resume, only: [:show]
   resource :photo_shoots, only: [:show]
   resource :kiln_share, only: [:show]
   resource :terrarium_workshops, only: [:show]
