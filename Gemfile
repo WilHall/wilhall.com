@@ -29,6 +29,7 @@ gem 'devise'
 gem "duration_in_words"
 gem 'tzinfo-data', platforms: %i[ruby jruby]
 gem 'sitemap_generator'
+gem 'syntax_tree'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri ruby]
