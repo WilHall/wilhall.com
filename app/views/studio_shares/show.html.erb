@@ -2,10 +2,10 @@
   Wil Hall - Pottery Studio Share
 <% end %>
 <% content_for :meta do %>
-  <meta property="og:title" content="Wil Hall - Pottery Studio Share" /> 
-  <meta property="og:description" content="With this timeshare, you can book my home ceramics studio in 2h increments or start an unlimited access subscription to throw, trim, or decorate your own pottery." /> 
-  <meta property="og:image" content="https://wilhall.com/photos/studio.png" />
-  <meta name="description" content="With this timeshare, you can book my home ceramics studio in 2h increments or start an unlimited access subscription to throw, trim, or decorate your own pottery.">  
+  <meta property="og:title" content="Wil Hall - Pottery Studio Share"/>
+  <meta property="og:description" content="With this timeshare, you can book my home ceramics studio in 2h increments or start an unlimited access subscription to throw, trim, or decorate your own pottery."/>
+  <meta property="og:image" content="https://wilhall.com/photos/studio.png"/>
+  <meta name="description" content="With this timeshare, you can book my home ceramics studio in 2h increments or start an unlimited access subscription to throw, trim, or decorate your own pottery.">
 <% end %>
 
 <article class="py-8 md:py-16 antialiased">
@@ -25,14 +25,14 @@
           <p
             class="text-xl font-bold text-slate-900 sm:text-2xl"
           >
-          $25/hr <small>(or $220/mo)</small>
+            $25/hr <small>(or $220/mo)</small>
           </p>
         </div>
 
         <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
           <a
             data-umami-event="Studio Share - Schedule per hour"
-            href="https://savvycal.com/wilhall/6a97fff2"
+            href="https://booking.wilhall.com/wilhall/studio-share"
             target="_blank"
             class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
@@ -49,7 +49,7 @@
             Start a Monthly Subscription
           </a>
         </div>
-        
+
         <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
           <a
             href="<%= studio_path %>"
@@ -64,7 +64,8 @@
 
         <div class="text-slate-700 prose">
           <p>
-            With this timeshare, you can book my home ceramics studio in 2h increments or start an unlimited access subscription
+            With this timeshare, you can book my home ceramics studio in 2h increments or start an unlimited access
+            subscription
             to throw, trim, or decorate your own pottery. This does not include any instruction, but does include clay,
             firing, and consumables such as underglaze and glaze.
           </p>
@@ -84,7 +85,9 @@
             </li>
             <li>Use of all my glazes (See <%= link_to "Glaze Options", studio_path(anchor: "glazes") %>)</li>
             <li>Use of my other consumables such as underglazes</li>
-            <li>Bisque and glaze firing for all pieces you produce, at 50% off my <%= link_to "Kiln Share", kiln_share_path %> cost</li>
+            <li>Bisque and glaze firing for all pieces you produce, at 50% off
+              my <%= link_to "Kiln Share", kiln_share_path %> cost
+            </li>
             <li>Shared throwing and decorating tools</li>
             <li>You may bring your own underglazes and glazes</li>
             <li>For monthly subscribers: Dedicated shelf storage anything you would like</li>
