@@ -45,3 +45,5 @@ gem 'redis', '~> 4.0'
 gem 'cssbundling-rails', '~> 1.4'
 
 gem 'roadie-rails', '~> 3.1'
+
+gem "redcarpet", "~> 3.6"

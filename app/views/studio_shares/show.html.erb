@@ -40,13 +40,12 @@
             Schedule per hour
           </a>
           <a
-            data-umami-event="Studio Share - Start a Monthly Subscription"
-            href="https://buy.stripe.com/cN2bJ78Gi8rY1Nu9AA"
-            target="_blank"
+            data-umami-event="Studio Share - Start a Monthly Membership"
+            href="#membership_options"
             class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
           >
-            Start a Monthly Subscription
+            Start a Monthly Membership
           </a>
         </div>
 
@@ -62,16 +61,15 @@
 
         <hr class="my-6 md:my-8 border-slate-200"/>
 
-        <div class="text-slate-700 prose">
+        <section class="text-slate-700 prose">
           <p>
-            With this timeshare, you can book my home ceramics studio in 2h increments or start an unlimited access
-            subscription
+            With this timeshare, you can book my home ceramics studio in 2h increments or become a monthly member
             to throw, trim, or decorate your own pottery. This does not include any instruction, but does include clay,
             firing, and consumables such as underglaze and glaze.
           </p>
 
           <p>
-            You must have experience working in a shared ceramics studio space and attend a 15m orientation.
+            You must have experience working in a shared ceramics studio space and attend a 15m orientation. Want to know what it's like to work in the space? Take a look through the <%= link_to "Studio Guide", studio_path(anchor: "guide") %>.
           </p>
 
           <p class="font-bold">
@@ -79,32 +77,33 @@
           </p>
 
           <ul class="pl-5 list-disc list-inside">
-            <li>4lb/hour of clay (carries over if you do not use it all); your choice of Standard Clay Company's White
-              Stoneware 563, Warm Buff 553, or VP Porcelain 551, or my recycled mix of these. You may purchase
-              additional clay at a rate of $1.50/lb in 4lb increments.
-            </li>
+            <li>4lb/hour of clay (See <%= link_to "Studio Guide", studio_path(anchor: "guide") %> for clay options)</li>
+            <li>Additional clay may be purchased at a rate of $1.50/lb</li>
             <li>Use of all my glazes (See <%= link_to "Glaze Options", studio_path(anchor: "glazes") %>)</li>
             <li>Use of my other consumables such as underglazes</li>
-            <li>Bisque and glaze firing for all pieces you produce, at 50% off
-              my <%= link_to "Kiln Share", kiln_share_path %> cost
-            </li>
             <li>Shared throwing and decorating tools</li>
             <li>You may bring your own underglazes and glazes</li>
-            <li>For monthly subscribers: Dedicated shelf storage anything you would like</li>
-            <li>For non-monthly subscribers: Shared shelf storage for your personal greenware and bisqueware</li>
+            <li>Temporary shared shelf storage for your greenware and bisqueware</li>
           </ul>
           <p class="font-bold">
             What is not included:
           </p>
 
           <ul class="pl-5 list-disc list-inside">
-            <li>Instruction, lessons</li>
+            <li>Instruction, lessons (although I do offer <%= link_to "lessons for one to two people", lessons_path %>)</li>
             <li>Unscheduled studio access</li>
             <li>You may not bring your own clay</li>
-            <li>For non-monthly subscribers: No storage for personal consumables or tools</li>
           </ul>
 
-        </div>
+        </section>
+
+        <hr class="my-6 md:my-8 border-slate-200"/>
+
+        <section id="membership_options" class="text-slate-700 prose">
+          <h2>Membership Options</h2>
+
+          <%= render partial: "studios/memberships" %>
+        </section>
       </div>
     </div>
   </div>
