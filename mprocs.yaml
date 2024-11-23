@@ -1,0 +1,5 @@
+procs:
+  rails:
+    shell: bin/rails server 
+  vite:
+    shell: bin/vite dev
