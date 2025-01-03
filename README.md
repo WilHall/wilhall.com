@@ -7,15 +7,16 @@ Hyperlocal art and events
 On Ubuntu
 
 1. `git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0`
-1. `echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc`
-1. `source ~/.bashrc`
-1. `sudo apt-get install libpq-dev`
-1. `asdf plugin add nodejs`
-1. `asdf plugin add ruby`
-1. `asdf plugin add yarn`
-1. `asdf install`
-1. `rails db:create db:migrate`
-1. `bin/dev`
+2. `echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc`
+3. `source ~/.bashrc`
+4. `sudo apt-get install libpq-dev`
+5. `asdf plugin add nodejs`
+6. `asdf plugin add ruby`
+7. `asdf plugin add yarn`
+8. `asdf install`
+9. `bin/bundle install`
+10. `bin/rails db:create db:migrate`
+11. `bin/dev`
 
 ## Hosting Setup
 

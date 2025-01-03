@@ -24,7 +24,7 @@ A student monthly membership is a great option if you want to take regular recur
  - Dedicated shelf storage (one small)
  - Four pre-scheduled one-hour lessons per month
  - Eight hours of self-scheduled studio share time per month
- - 30% off one additional lesson per month, for you or a friend
+ - One guest pass per month (bring a friend to a lesson, once)
  - Bisque and Glaze firings are free
 
 <h3><a

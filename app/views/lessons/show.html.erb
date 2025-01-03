@@ -5,7 +5,7 @@
   <meta property="og:title" content="Wil Hall - Pottery Lessons"/>
   <meta property="og:description" content="A private wheel-throwing pottery lesson taught out of my home studio in Somerville, MA near Davis Square - no prior experience required, and all materials and tools are included."/>
   <meta property="og:image" content="https://wilhall.com/photos/lesson.png"/>
-  <meta name="description" content="A private wheel-throwing pottery lesson taught out of my home studio in Somerville, MA near Davis Square - no prior experience required, and all materials and tools are included.">
+  <meta name="description" content="Private wheel-throwing pottery lessons taught out of my home studio in Somerville, MA near Davis Square - no prior experience required, and all materials and tools are included.">
 <% end %>
 
 <article class="py-8 md:py-16 antialiased">
@@ -43,28 +43,19 @@
           <p
             class="text-xl font-bold text-slate-900 sm:text-2xl"
           >
-            $70<small>/person</small>
+            $150<small>/month</small>
           </p>
         </div>
 
         <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
           <a
-            data-umami-event="Pottery Lesson - Schedule For One Person"
-            href="https://booking.wilhall.com/pottery-lesson-for-one"
+            data-umami-event="Start a Student Monthly Membership"
+            href="https://buy.stripe.com/dR67sR8Gi8rYfEk00G"
             target="_blank"
             class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
             role="button"
           >
-            Schedule for One Person
-          </a>
-          <a
-            data-umami-event="Pottery Lesson - Schedule For Two People"
-            href="https://booking.wilhall.com/pottery-lesson-for-two"
-            target="_blank"
-            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-secondary rounded-lg border border-slate-200 hover:opacity-80 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-slate-100"
-            role="button"
-          >
-            Schedule for Two People
+            Start a Student Monthly Membership
           </a>
         </div>
 
@@ -81,45 +72,7 @@
         <hr class="my-6 md:my-8 border-slate-200"/>
 
         <div class="text-slate-700 prose">
-          <p>
-            A private wheel-throwing pottery lesson taught out of my home studio in Somerville, MA near Davis Square -
-            no
-            prior experience required, and all materials and tools are included. Each two-hour lesson includes 6lbs
-
-            of clay to throw with and allows for keeping two pieces.
-          </p>
-
-          <p>
-            At the end of the lesson, you'll <%= link_to "Choose a Glaze", studio_path(anchor: "glazes") %> for me to fire your pieces with, and you can pick them up when they are completed.
-          </p>
-
-          <p>
-            Please note that I can only accept lessons for one to two people at this time.
-          </p>
-
-          <p>
-            Food-safety and Dishwasher-safety of items will depend on decoration methods chosen.
-          </p>
-
-          <p class="font-bold">
-            For first-time students:
-          </p>
-
-          <ul class="pl-5 list-disc list-inside">
-            <li>You can expect a minimum of two weeks for your pots to be fired, decorated, and ready for pickup.</li>
-            <li>In the meantime, you are welcome to schedule additional throwing lessons</li>
-            <li>Once your pieces are ready for pickup, you may pick them up at a future lesson or schedule a time with me to pick them up</li>
-          </ul>
-
-          <p class="font-bold">
-            For returning students:
-          </p>
-
-          <ul class="pl-5 list-disc list-inside">
-            <li>You may schedule as many 2+ hour throwing lessons as you would like</li>
-            <li>You may <%= link_to "Start a Monthly Membership", studio_share_path(anchor: "membership_options") %> for weekly recurring lessons (and more included), which equates to ~50% off</li>
-            <li>After a minimum of 3 lessons, you are eligible for my <%= link_to "Studio Share", studio_share_path %></li>
-          </ul>
+          <%= render partial: "studios/memberships" %>
         </div>
       </div>
     </div>
