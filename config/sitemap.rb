@@ -20,8 +20,6 @@ SitemapGenerator::Sitemap.create do
   add studio_share_path, :priority => 1.0
   add studio_path, :priority => 0.7
   add kiln_share_path, :priority => 1.0
-  add terrarium_workshops_path, :priority => 1.0
-  add terrariums_path, :priority => 1.0
   add store_path, :priority => 1.0
   add contact_path, :priority => 0.7
   add purpose_path, :priority => 0.7
